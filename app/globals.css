@@ -2,32 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "vazir";
+    src: url(../public/fonts/vazir/Vazir.eot);
+    src: url(../public/fonts/vazir/Vazir.woff) format("woff"),
+      url(../public/fonts/vazir/Vazir.woff2) format("woff2"),
+      url(../public/fonts/vazir/Vazir.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Dana";
+    src: url(../public/fonts/Dana/woff2/DanaFaNum-Regular.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Dana Medium";
+    src: url(../public/fonts/Dana/woff2/DanaFaNum-Medium.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Dana Demibold";
+    src: url(../public/fonts/Dana/woff2/DanaFaNum-Medium.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Moraba Light";
+    src: url(../public/fonts/moraba/Morabba-Light.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Moraba Medium";
+    src: url(../public/fonts/moraba/Morabba-Medium.woff2) format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Moraba Bold";
+    src: url(../public/fonts/moraba/Morabba-Bold.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  body {
+    @apply bg-gray-100 dark:bg-zinc-800;
+  }
+  .active-link {
+    @apply text-orange-300;
   }
 }
