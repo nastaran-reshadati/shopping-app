@@ -30,12 +30,12 @@ const Header = () => {
     {
       id: "1",
       title: "لحظات ناب",
-      body: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک اسطرآنچنان که لازم است",
+      body: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها وتولید سادگی نامفهوم  لازم است",
     },
     {
       id: "2",
       title: "طعم لذیذ",
-      body: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانو متون بلکه روزنامه و مجله در ستون  که لازم است",
+      body: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها  و مجله در ستون  که لازم است",
     },
   ];
   return (
@@ -165,14 +165,19 @@ const Header = () => {
         data-carousel="slide"
       >
         <div className="duration-700 ease-in-out">
-          <h1 className="font-MorabaBold text-4xl my-3">
+          <h1 className="font-MorabaBold text-4xl my-3 text-white dark:text-gray-50">
             {slidesText[currentIndex].title}
           </h1>
-          <p className="font-MorabaLight text-xl w-[640px] text-right leading-9">
+          <p className="font-MorabaLight text-xl w-[640px] text-right leading-9 text-white dark:text-gray-50">
             {slidesText[currentIndex].body}
           </p>
         </div>
-        <div className="absolute top-48 right-36 carousel slide">
+        <div>
+          <button className="rounded-3xl bg-orange-300 hover:bg-orange-400 font-Dana my-5 text-white  py-2 px-7">
+            سفارش
+          </button>
+        </div>
+        <div className="absolute top-60 right-0 carousel slide">
           <div className="container">
             <ol className="flex flex-row gap-x-2">
               {slidesText.map((_, index) => (
