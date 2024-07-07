@@ -2,21 +2,45 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import heroImage from "@/public/images/wallpaperflare.com_wallpaper (2).jpg";
 import { useTheme } from "next-themes";
 
 const Header = () => {
   const currentPath = usePathname();
   const { theme, setTheme } = useTheme();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const toggleTheme = () => {
     console.log(theme);
 
     setTheme(theme === "light" ? "dark" : "light");
   };
+
+  const handleClick = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const slidesText = [
+    {
+      id: "0",
+      title: "طعم به یادماندنی",
+      body: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+    },
+    {
+      id: "1",
+      title: "لحظات ناب",
+      body: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک اسطرآنچنان که لازم است",
+    },
+    {
+      id: "2",
+      title: "طعم لذیذ",
+      body: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانو متون بلکه روزنامه و مجله در ستون  که لازم است",
+    },
+  ];
   return (
-    <>
-      <div>
+    <div className="hero_area">
+      <div className="relative">
         <Image src={heroImage} priority alt="hero-image" height="805px" />
       </div>
       <header className="fixed top-8 right-0 left-0 w-[90%] h-24 rounded-3xl py-5 px-10 mx-auto flex bg-blue justify-between items-center bg-black/50 backdrop-blur-[6px] text-brown-300">
@@ -135,7 +159,38 @@ const Header = () => {
         {/* Card & theme toggele  */}
         {/* <div>left section</div> */}
       </header>
-    </>
+      <div
+        id="default-carousel"
+        className="absolute top-[11rem] right-36 container"
+        data-carousel="slide"
+      >
+        <div className="duration-700 ease-in-out">
+          <h1 className="font-MorabaBold text-4xl my-3">
+            {slidesText[currentIndex].title}
+          </h1>
+          <p className="font-MorabaLight text-xl w-[640px] text-right leading-9">
+            {slidesText[currentIndex].body}
+          </p>
+        </div>
+        <div className="absolute top-48 right-36 carousel slide">
+          <div className="container">
+            <ol className="flex flex-row gap-x-2">
+              {slidesText.map((_, index) => (
+                <div
+                  key={index}
+                  className={
+                    currentIndex === index
+                      ? "cursor-pointer rounded-full w-3 h-3 opacity-75 bg-orange-500 active"
+                      : "cursor-pointer rounded-full w-3 h-3 opacity-75 bg-white"
+                  }
+                  onClick={() => handleClick(index)}
+                ></div>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
