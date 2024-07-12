@@ -43,7 +43,7 @@ const Header = () => {
       <div className="relative">
         <Image src={heroImage} priority alt="hero-image" height="805px" />
       </div>
-      <header className="fixed top-8 right-0 left-0 w-[90%] h-24 rounded-3xl py-5 px-10 mx-auto flex bg-blue justify-between items-center bg-black/50 backdrop-blur-[6px] text-brown-300">
+      <header className="fixed top-8 right-0 left-0 w-[90%] h-24 z-50 rounded-3xl py-5 px-10 mx-auto flex bg-blue justify-between items-center bg-black/50 backdrop-blur-[6px] text-brown-300">
         {/* logo & menu */}
         <nav className="flex items-center gap-x-9">
           {/* <Image src="/images/app-logo.png" width={56} height={53} alt="logo" /> */}

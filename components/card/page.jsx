@@ -21,7 +21,7 @@ const Card = () => {
               />
             </svg>
           </div>
-          <h3 className="text-center mt-3 mb-4"> تماس سریع</h3>
+          <h3 className="text-center mt-3 mb-4"> پشتیانی</h3>
           <p className="leading-8">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
             استفاده از طراحان گرافیک است.
