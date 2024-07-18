@@ -1,3 +1,4 @@
+import AboutUs from "@/components/aboutUs/page";
 import Card from "@/components/card/page";
 import ProductsTab from "@/components/products/productsTab/page";
 import Tab from "@/components/products/tab/page";
@@ -8,6 +9,7 @@ export default async function Home() {
     <>
       <Card />
       <Tab />
+      <AboutUs />
       <br />
       <br />
       <br />

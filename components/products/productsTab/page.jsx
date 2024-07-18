@@ -5,7 +5,6 @@ import React, { useState } from "react";
 
 const Products = ({ tabList, tabPanel }) => {
   const [active, setActive] = useState(0);
-  console.log(active);
 
   return (
     <>
