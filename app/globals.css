@@ -59,6 +59,12 @@
   .svg-icon {
     @apply size-6 cursor-pointer w-8 h-8;
   }
+  .logo-icon {
+    @apply size-12 cursor-pointer w-12 h-12  text-orange-300;
+  }
+  .active-responsive-link {
+    @apply text-orange-300 bg-zinc-600/20 rounded-md;
+  }
 }
 /* header section */
 .hero_area {
@@ -72,4 +78,8 @@
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: #222831;
+}
+.active-responsive-link {
+  background-color: rgba(254, 215, 170, 0.2);
+  color: #fdba74;
 }
