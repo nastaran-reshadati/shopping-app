@@ -13,20 +13,26 @@ const Hero = () => {
 
   return (
     <div className="hero_area">
-      <div className="relative">
-        <Image src={heroImage} priority alt="hero-image" height="805px" />
+      <div className="relative h-full">
+        <Image
+          className="h-full object-cover"
+          src={heroImage}
+          priority
+          alt="hero-image"
+          height="805px"
+        />
       </div>
       {/* Hero Section */}
       <div
         id="default-carousel"
-        className="container absolute top-[11rem] right-0 px-8 mx-auto  overflow-hidden"
+        className="container absolute top-[10rem] right-0 px-8 mx-auto  overflow-hidden"
         data-carousel="slide"
       >
         <div className="duration-700 ease-in-out">
-          <h1 className="font-MorabaBold text-4xl my-3 text-white dark:text-gray-50">
+          <h1 className="font-MorabaBold text-lg md:text-2xl lg:text-4xl my-3 text-white dark:text-gray-50">
             {slidesText[currentIndex].title}
           </h1>
-          <p className="font-MorabaLight text-xl w-[640px] text-right leading-9 text-white dark:text-gray-50">
+          <p className="hidden md:flex font-MorabaLight text-xl w-[640px] text-right leading-9 text-white dark:text-gray-50">
             {slidesText[currentIndex].body}
           </p>
         </div>

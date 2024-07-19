@@ -1,13 +1,17 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const currentPath = usePathname();
   const { theme, setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   const toggleTheme = () => {
     console.log(theme);
 
@@ -90,9 +94,16 @@ const Navbar = () => {
 
       {/* Mobile  Navbar   */}
       <section>
-        <div className="fixed top-0 right-0 w-full flex md:hidden bg-gray-100 dark:bg-black/20 backdrop-blur-[6px]">
+        <div
+          className="fixed z-20
+         top-0 right-0 w-full flex md:hidden text-white bg-black/20 dark:bg-black/20 backdrop-blur-[6px]"
+        >
           <div className="flex w-full  items-center justify-between h-16 px-5">
-            <svg className="svg-icon" stroke="currentColor">
+            <svg
+              onClick={toggleMenu}
+              className="svg-icon"
+              stroke="currentColor"
+            >
               <use href="/icons.svg#bars-3" />
             </svg>
             <svg>
@@ -103,8 +114,15 @@ const Navbar = () => {
             </svg>
           </div>
         </div>
-        <div className="md:hidden w-64 min-h-screen pr-7 pl-4 pt-5 fixed top-0 bottom-0 right-0 bg-white dark:bg-zinc-700 z-50">
-          <div className="flex justify-end">
+        <div
+          className={`${
+            isOpen ? "fixed translate-x-0" : "hidden translate-x-full"
+          } md:hidden transition-all w-64 min-h-screen pr-7 pl-4 pt-5 top-0 bottom-0 right-0 bg-white dark:bg-zinc-700 z-50`}
+        >
+          <div
+            className="flex justify-end cursor-pointer"
+            onClick={() => setIsOpen(false)}
+          >
             <svg stroke="currentColor" className="w-5 h-5">
               <use href="/icons.svg#x-mark" />
             </svg>
@@ -204,7 +222,6 @@ const Navbar = () => {
           </div>
         </div>
       </section>
-      {/* mobile */}
     </>
   );
 };
