@@ -1,5 +1,6 @@
 import AboutUs from "@/components/aboutUs/page";
 import Card from "@/components/card/page";
+import Hero from "@/components/hero/page";
 import ProductsTab from "@/components/products/productsTab/page";
 import Tab from "@/components/products/tab/page";
 import { getFetch } from "@/utils/fetch";
@@ -7,29 +8,11 @@ import { getFetch } from "@/utils/fetch";
 export default async function Home() {
   return (
     <>
+      <Hero />
       <Card />
       <Tab />
       <AboutUs />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
       {/* <ProductsTab /> */}
     </>
   );
