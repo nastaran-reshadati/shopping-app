@@ -7,6 +7,14 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "2rem",
+        sm: "2rem",
+        lg: "4rem",
+      },
+    },
     screens: {
       sm: "640px",
       // => @media (min-width: 640px) { ... }

@@ -9,9 +9,9 @@ const Tab = async () => {
   return (
     <div className="container mx-auto space-y-8">
       <div className="flex justify-center items-center gap-4 ">
-        <div className="indicator-menu"></div>
+        <div className="indicator-title"></div>
         <h3 className="font-MorabaBold text-3xl text-center">منو</h3>
-        <div className="indicator-menu"></div>{" "}
+        <div className="indicator-title"></div>{" "}
       </div>
       <Products tabList={data?.tabList} tabPanel={data?.tabPanel} />
     </div>

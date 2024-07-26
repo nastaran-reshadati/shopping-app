@@ -31,7 +31,7 @@ const Products = ({ tabList, tabPanel }) => {
             active === tabIndex && (
               <div
                 key={tabIndex}
-                className="[&>*]:font-Dana font-normal grid grid-cols-1 place-items-center md:place-items-stretch md:grid-cols-3 justify-center mx-auto gap-6 rounded-3xl"
+                className="[&>*]:font-Dana font-normal grid grid-cols-1 md:grid-cols-3 rounded-3xl mx-auto"
               >
                 {tabs?.map((item) => (
                   <div

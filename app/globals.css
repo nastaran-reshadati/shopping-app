@@ -53,7 +53,7 @@
   .active-link {
     @apply text-orange-300;
   }
-  .indicator-menu {
+  .indicator-title {
     @apply w-3 h-1 bg-orange-500;
   }
   .svg-icon {

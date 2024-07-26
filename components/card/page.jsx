@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = () => {
   return (
-    <section className="container mx-auto my-14">
+    <div className="container my-14 ">
       <div className="grid sm:grid-cols-1 md:grid-cols-3  gap-3">
         <div className="[&>*]:font-DanaMedium rounded-3xl py-2 px-3 bg-transparent shadow-md dark:bg-gray-700">
           <div className="flex justify-center">
@@ -79,7 +79,7 @@ const Card = () => {
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
