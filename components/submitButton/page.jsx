@@ -1,16 +1,16 @@
 "use client";
+import { getFetch } from "@/utils/fetch";
 import React from "react";
 import { useFormState, useFormStatus } from "react-dom";
 
 const SubmitButton = ({ title }) => {
   const { pending } = useFormStatus();
-  console.log(pending);
 
   return (
     <button
       type="submit"
       disabled={pending}
-      className="w-full font-Dana text-base text-wh bg-blue-600 text-white p-4 rounded-lg disabled:opacity-75"
+      className="w-full font-Dana text-base text-wh bg-blue-600 text-white p-4 rounded-lg disabled:opacity-60"
     >
       {pending ? (
         <div role="status">

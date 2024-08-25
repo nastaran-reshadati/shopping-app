@@ -9,10 +9,8 @@ import toast from "react-hot-toast";
 const ContactForm = () => {
   const [state, formAction] = useFormState(CreateContact, {});
 
-  const notify = () => toast("Here is your toast.");
-
   useEffect(() => {
-    if (state.status === "error") {
+    if (state && state.status === "error") {
       toast.error(<div className="font-DanaMedium">{state.message}</div>);
     }
   }, [state]);
@@ -60,7 +58,6 @@ const ContactForm = () => {
         </div>
       )}
       <SubmitButton title={"ارسال پیام"} />
-      <button onClick={notify}>Make me a toast</button>
     </form>
   );
 };
