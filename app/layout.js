@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/layout/navbar/page";
 import Footer from "@/components/layout/footer/page";
+import Toaster from "@/lib/hotTost";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Footer />
+          <Toaster position="bottom-left" reverseOrder={false} />
         </ThemeProvider>
       </body>
     </html>
