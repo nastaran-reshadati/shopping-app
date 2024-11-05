@@ -15,7 +15,7 @@ const Hero = () => {
     <div className="hero_area">
       <div className="relative h-full">
         <Image
-          className="h-full object-cover"
+          className="h-full object-cover w-full"
           src={heroImage}
           priority
           alt="hero-image"

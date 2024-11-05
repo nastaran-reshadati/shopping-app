@@ -4,7 +4,6 @@ import Contacts from "@/components/contactUs/page";
 import Hero from "@/components/hero/page";
 import ProductsTab from "@/components/products/productsTab/page";
 import Tab from "@/components/products/tab/page";
-import { getFetch } from "@/utils/fetch";
 
 export default async function Home() {
   return (

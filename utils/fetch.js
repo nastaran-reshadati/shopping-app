@@ -1,5 +1,6 @@
 export const getFetch = async (url) => {
-  const res = await fetch(`${process.env.BASE_URL}${url}`, {
+  // console.log(process.env.BASE_URL);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}${url}`, {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
@@ -8,11 +9,10 @@ export const getFetch = async (url) => {
   if (res.ok) {
     return await res.json();
   }
-  console.log(await res.json());
   //   return await res.json();
 };
 export const createFetch = async (url, body) => {
-  const res = await fetch(`${process.env.BASE_URL}${url}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}${url}`, {
     cache: "no-store",
     method: "POST",
     headers: {

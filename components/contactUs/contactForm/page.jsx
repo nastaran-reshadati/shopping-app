@@ -16,8 +16,7 @@ const ContactForm = () => {
   }, [state]);
 
   return (
-    <form className="space-y-4" action={formAction}>
-      <div>
+       <div>
         <input
           placeholder="نام و نام خانوادگی"
           name="name"
